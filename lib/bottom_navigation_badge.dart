@@ -129,8 +129,7 @@ class BottomNavigationBadge {
     return items;
   }
 
-  List<BottomNavigationBarItem> removeBadge(
-      List<BottomNavigationBarItem> items, int index) {
+  List<BottomNavigationBarItem> removeBadge(List items, int index) {
     if (items[index].icon is Stack) {
       BottomNavigationBarItem _replacer = BottomNavigationBarItem(
           icon: items[index].icon.children[0].child,
@@ -143,7 +142,7 @@ class BottomNavigationBadge {
     return items;
   }
 
-  List<BottomNavigationBarItem> removeAll(List<BottomNavigationBarItem> items) {
+  List<BottomNavigationBarItem> removeAll(List items) {
     for (var i = 0; i < items.length; i++) {
       if (items[i].icon is Stack) {
         BottomNavigationBarItem _replacer = BottomNavigationBarItem(
