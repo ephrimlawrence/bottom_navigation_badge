@@ -71,7 +71,8 @@ class BottomNavigationBadge {
     return alignment;
   }
 
-  List setBadge(List items, String content, int index) {
+  List<BottomNavigationBarItem> setBadge(
+      List<BottomNavigationBarItem> items, String content, int index) {
     Widget badge = content == null
         ? null
         : new Container(
@@ -128,7 +129,8 @@ class BottomNavigationBadge {
     return items;
   }
 
-  List removeBadge(List items, int index) {
+  List<BottomNavigationBarItem> removeBadge(
+      List<BottomNavigationBarItem> items, int index) {
     if (items[index].icon is Stack) {
       BottomNavigationBarItem _replacer = BottomNavigationBarItem(
           icon: items[index].icon.children[0].child,
@@ -141,7 +143,7 @@ class BottomNavigationBadge {
     return items;
   }
 
-  List removeAll(List items) {
+  List<BottomNavigationBarItem> removeAll(List<BottomNavigationBarItem> items) {
     for (var i = 0; i < items.length; i++) {
       if (items[i].icon is Stack) {
         BottomNavigationBarItem _replacer = BottomNavigationBarItem(
