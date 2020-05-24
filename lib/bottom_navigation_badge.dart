@@ -73,8 +73,8 @@ class BottomNavigationBadge {
 
   List<BottomNavigationBarItem> setBadge(
       List<BottomNavigationBarItem> items, String content, int index) {
-    Widget badge = content == null
-        ? null
+    Widget badge = (content == null || content == '')
+        ? SizedBox()
         : new Container(
             height: 14,
             width: 14,
